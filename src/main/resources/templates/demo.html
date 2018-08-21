@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Demo</title>
+</head>
+<body>
+    <form method="post" th:object="${demoForm}">
+
+        <label for="valid">Valid:</label>
+        <input th:field="*{valid}">
+        <span id="valid.errors" th:errors="*{valid}" style="color:red"></span>
+
+        <br>
+
+        <label for="invalid">Invalid:</label>
+        <input th:field="*{invalid}">
+        <span id="invalid.errors" th:errors="*{invalid}" style="color:red"></span>
+
+        <br>
+
+        <button>Submit</button>
+    </form>
+</body>
+</html>
